@@ -4,15 +4,12 @@ import unittest
 
 class TestSequenceFunctions(unittest.TestCase):
 
-	def setUp(self):
-		self.errorVar = 10
-
-	def test_create_exception(self, x):
+	def create_exception(self, x):
 		self.errorVar = x
 
-	def test_assert_raises(self):
+	def test_exception(self):
 		#This check tests if a specific exception was raised
-		self.assertRaises(SyntaxError, test_create_exception, '10p')
+		self.assertRaises(SyntaxError, self.create_exception('10p'))
 
 if __name__ == '__main__':
 	unittest.main()

@@ -9,12 +9,13 @@ class Employee:
 
 dave = Employee()
 mike = Employee()
+matt = dave
 
 class TestSequenceFunctions(unittest.TestCase):
 
 	def test_is(self):
-		"""This check tests if a condition is TRUE"""
-		self.assertTrue(dave, mike)
+		"""This check tests if the two objects are the same"""
+		self.assertIs(dave, matt)
 
 suite = unittest.TestLoader().loadTestsFromTestCase(TestSequenceFunctions)
 unittest.TextTestRunner(verbosity=2).run(suite)

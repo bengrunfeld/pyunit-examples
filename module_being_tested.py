@@ -3,7 +3,7 @@
 
 class Employee:
 	def __init__(self):
-		self.someVar = range(10)
+		self.someRange = range(10)
 
 dave = Employee()
 mike = Employee()
